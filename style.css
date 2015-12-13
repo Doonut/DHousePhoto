@@ -1,5 +1,6 @@
-#imageSlider{
-    padding-top: 50px;
+.aboutPic{
+    margin: 0 auto;
 }
-body { background: url(background.jpg); }
-.container { background: ; }
+.aboutPicOuter{
+    width: 100%;
+}
