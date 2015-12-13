@@ -107,13 +107,13 @@
 
         <div id="links">
             <a href="photos/ex1.jpg" data-gallery>
-                <img src="photos/ex1.jpg">
+                <img src="photos/ex1.jpg" class="img-thumbnail">
             </a>
             <a href="photos/ex2.jpg" data-gallery>
-                <img src="photos/ex2.jpg">
+                <img src="photos/ex2.jpg" class="img-thumbnail">
             </a>
             <a href="photos/ex3.jpg" data-gallery>
-                <img src="photos/ex3.jpg">
+                <img src="photos/ex3.jpg" class="img-thumbnail">
             </a>
         </div>
 
