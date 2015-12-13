@@ -9,11 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Round About - Start Bootstrap Template</title>
+    <title>Dalton House Photo</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
 
     <!-- Custom CSS -->
     <style>
@@ -58,7 +57,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.php">Home</a></li>
-            <li><a href="#photo">Photos</a></li>
+            <li><a href="photo.php">Photos</a></li>
             <li><a href="about.php">About</a></li>
             <li class="active"><a href="#">Contact</a></li>
           </ul>
@@ -69,7 +68,7 @@
     <!-- Page Content -->
     <div class="container">
         <!-- Introduction Row -->
-        <div class="row">
+        <div class="row jumbotron">
             <div class="col-lg-12">
                 <h1 class="page-header">Contact Me</h1>
                 <p>Email me <a href="mailto:dhousephotography@gmail.com">Here!</a></p>
@@ -77,7 +76,6 @@
         </div>
 
         <hr>
-
         <!-- Footer -->
         <footer>
             <div class="row">

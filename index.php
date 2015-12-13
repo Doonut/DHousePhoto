@@ -194,13 +194,13 @@
         <div data-u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
             height: 565px; overflow: hidden;">
             <div>
-                <img data-u="image" src="http://i.imgur.com/VPJOB0K.jpg" alt="" />
+                <img data-u="image" src="photos/front1.jpg" alt="" />
             </div>
             <div>
-                <img data-u="image" src="http://i.imgur.com/nwXYtxl.jpg" alt="" />
+                <img data-u="image" src="photos/front2.jpg" alt="" />
             </div>
             <div>
-                <img data-u="image" src="http://i.imgur.com/3Oy2kUt.jpg" alt="" />
+                <img data-u="image" src="photos/front3.jpg" alt="" />
             </div>
         </div>
 

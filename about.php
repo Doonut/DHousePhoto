@@ -68,7 +68,7 @@
 
     <!-- Page Content -->
     <div class="container">
-
+        <div class="jumbotron">
         <!-- Dalton Picture -->
         <div class="aboutPicOuter">
             <div class="text-center aboutPic">
@@ -84,7 +84,7 @@
                 <p>About Placeholder</p>
             </div>
         </div>
-
+        </div>
         <hr>
 
         <!-- Footer -->
