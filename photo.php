@@ -22,6 +22,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="gallery/css/blueimp-gallery.min.css">
 
     <!-- Custom CSS -->
     <style>
@@ -68,34 +69,44 @@
             <li><a href="index.php">Home</a></li>
             <li class="active"><a href="#">Photos</a></li>
             <li><a href="about.php">About</a></li>
-            <li><a href="contact.php">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+        <div class="slides"></div>
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+    </div>
+
     <!-- Page Content -->
     <div class="container">
-
-        
         <div id="links">
         <?php
         $api = new \Cloudinary\Api();
         $result = $api->resources(array("max_results" => "500","type" => "upload", "prefix" => "concert/"));
         foreach($result["resources"] as $photo){
-            echo cl_image_tag($photo["public_id"] . ".jpg", array("crop" => "scale", "width" => 0.1));
-            echo "\n";
+            ?>
+            <a href="<?php echo $photo["url"] ?>" title="photo">
+                <?php
+                echo cl_image_tag($photo["public_id"] . ".jpg", array("crop" => "scale", "width" => 0.04));
+                echo "\n";
+                ?>
+            </a>
+            <?php
         }
         ?>
         </div>
-
-
-
         <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Dalton House 2015</p>
+                    <p>Copyright &copy; Dalton House 2016</p>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -110,8 +121,18 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="gallery/js/blueimp-gallery.min.js"></script>
 
+    <script type="text/javascript">
 
+document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+</script>
 </body>
-
 </html>

@@ -72,7 +72,7 @@
         .jssora21r.jssora21rdn { background-position: -303px -33px; }
     </style>
 </head>
-<body style="padding:0px; margin:0px; font-family:Arial, Verdana;background-color:#fff;">
+<body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -90,7 +90,6 @@
             <li class="active"><a href="#">Home</a></li>
             <li><a href="photo.php">Photos</a></li>
             <li><a href="about.php">About</a></li>
-            <li><a href="contact.php">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -194,13 +193,13 @@
         <div data-u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
             height: 565px; overflow: hidden;">
             <div>
-                <img data-u="image" src="photos/front1.jpg" alt="" />
+                <img data-u="image" src="http://res.cloudinary.com/dfnwplhxe/image/upload/concert/IMG_3165.jpg" alt="" />
             </div>
             <div>
-                <img data-u="image" src="photos/front2.jpg" alt="" />
+                <img data-u="image" src="http://res.cloudinary.com/dfnwplhxe/image/upload/concert/IMG_3499.jpg" alt="" />
             </div>
             <div>
-                <img data-u="image" src="photos/front3.jpg" alt="" />
+                <img data-u="image" src="http://res.cloudinary.com/dfnwplhxe/image/upload/concert/IMG_3146.jpg" alt="" />
             </div>
         </div>
 
@@ -226,7 +225,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Dalton House 2015</p>
+                    <p>Copyright &copy; Dalton House 2016</p>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>

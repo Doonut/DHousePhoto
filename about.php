@@ -60,7 +60,6 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="photo.php">Photos</a></li>
             <li class="active"><a href="#">About</a></li>
-            <li><a href="contact.php">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -83,15 +82,20 @@
                 <h1 class="page-header">About Me</h1>
                 <p>About Placeholder</p>
             </div>
+            <div class="col-lg-12">
+                <h1 class="page-header">Contact Me</h1>
+                <p>Email me <a href="mailto:dhousephotography@gmail.com">Here!</a></p>
+            </div>
         </div>
         </div>
+        
         <hr>
 
         <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Dalton House 2015</p>
+                    <p>Copyright &copy; Dalton House 2016</p>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
