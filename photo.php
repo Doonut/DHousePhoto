@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <?php
+        require_once 'vendor/autoload.php';
+
+	\Cloudinary::config(array(
+	  "cloud_name" => "dfnwplhxe",
+	  "api_key" => "896959298152149",
+	  "api_secret" => "b5FgCepAbTVYIei5Gb3qKw3oMIs"
+	));	
+    ?>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,8 +22,6 @@
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-    <link rel="stylesheet" href="gallery/css/bootstrap-image-gallery.min.css">
 
     <!-- Custom CSS -->
     <style>
@@ -70,58 +77,19 @@
     <!-- Page Content -->
     <div class="container">
 
-        <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
-        <div id="blueimp-gallery" class="blueimp-gallery">
-            <!-- The container for the modal slides -->
-            <div class="slides"></div>
-            <!-- Controls for the borderless lightbox -->
-            <h3 class="title"></h3>
-            <a class="prev">‹</a>
-            <a class="next">›</a>
-            <a class="close">×</a>
-            <a class="play-pause"></a>
-            <ol class="indicator"></ol>
-            <!-- The modal dialog, which will be used to wrap the lightbox content -->
-            <div class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title"></h4>
-                        </div>
-                        <div class="modal-body next"></div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default pull-left prev">
-                                <i class="glyphicon glyphicon-chevron-left"></i>
-                                Previous
-                            </button>
-                            <button type="button" class="btn btn-primary next">
-                                Next
-                                <i class="glyphicon glyphicon-chevron-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
+        <div id="links">
+        <?php
+        $api = new \Cloudinary\Api();
+        $result = $api->resources(array("max_results" => "500","type" => "upload", "prefix" => "concert/"));
+        foreach($result["resources"] as $photo){
+            echo cl_image_tag($photo["public_id"] . ".jpg", array("crop" => "scale", "width" => 0.1));
+            echo "\n";
+        }
+        ?>
         </div>
 
-        <div id="links">
-            <div style="width: 300px">
-            <a href="photos/ex1.jpg" data-gallery>
-                <img src="photos/ex1.jpg" class="img-thumbnail">
-            </a>
-            </div>
-            <div style="width: 300px">
-            <a href="photos/ex2.jpg" data-gallery>
-                <img src="photos/ex2.jpg" class="img-thumbnail">
-            </a>
-            </div>
-            <div style="width: 300px">
-            <a href="photos/ex3.jpg" data-gallery>
-                <img src="photos/ex3.jpg" class="img-thumbnail">
-            </a>
-            </div>
-        </div>
+
 
         <!-- Footer -->
         <footer>
@@ -142,8 +110,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-    <script src="gallery/js/bootstrap-image-gallery.min.js"></script>
+
 
 </body>
 
